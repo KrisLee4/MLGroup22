@@ -7,7 +7,7 @@ layout: default
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>Computer Vision Final Project Update Fall 2020</title>
+        <title>Machine Learning Project Proposal Spring 2021</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -33,7 +33,7 @@ layout: default
         <div class="container">
             <div class="page-header">
                 <!-- Title and Name -->
-                <h1>Goal-based Detection Technology for Soccer Goals</h1>
+                <h1>Classifying Flower Images on Toxicity</h1>
                 <span style="font-size: 20px; line-height: 1.5em;"><strong> Kristopher Lee, Haley Littmann, Anaya Patel, Amanda Walters, Mckennley Wilson</strong></span><br>
                 <span style="font-size: 18px; line-height: 1.5em;">Machine Learning: Project Proposal, Spring 2021</span><br>
                 <hr>
@@ -44,7 +44,7 @@ layout: default
                 </p>
 
                 <img src="pics/flower.png" style="margin-left:20%;">
-                <p style="margin-left:40%;"><b>Image 1:</b> Flower </p>
+                <p style="margin-left:40%;"><b>Image 1:</b> Flower 1</p>
 
                 <br>
 
@@ -67,28 +67,9 @@ layout: default
 
                 <!-- Potential Results -->
                 <h3>Potential Results</h3>
-                <p>Overall, we had difficulty finding an appropriate dataset for our needs in this project. Therefore, we worked with a dataset composed of images taken from Google and Youtube videos which showed shots on goal as well as the resulting call of whether the goal was made or not. The set of images we look at are taken when the ball is either in the goal or the closest to inside the goal that it was. There are two sets of images with one set relating to goals and the other to no-goals. There were 13 images in the goal set and 12 images in the no-goal set.</p>
-                <p>EEvery image was preprocessed with KMeans Clustering for noise reduction, followed by Canny edge detection for the Hough Circle Transformation to identify candidate locations of a soccer ball within the image. </p>
-                <img src="pics/results/NoiseReduction_k5.jpg" style="margin-left:25%;">
-                <p style="margin-left:37%;"><b>Image 2:</b> Example of noise reduction on image (k = 5).</p>
-                <img src="pics/results/Accumulator_sig5_r8_gFalse.jpg" style="margin-left:25%;">
-                <p style="margin-left:33%;"><b>Image 3:</b> Example of edge detection/accumulator array of Image 2.</p>
-                <p>The parameters we found that needed tuning per image were mainly the threshold on the edge detection and the radius of the ball for Hough circle detection. We attempted to implement a form of detection with variable radii however we found that, because of the larger amounts of votes obtained from larger circle candidates, this would require some tuning as well to find the right scale for the radii. Therefore, we decided to continue with the previous circle detection and adjust the radius ourselves.</p>
-                <img src="pics/results/HoughCircle_sig5_r8_gFalse_th0.5.jpg" style="margin-left:25%;">
-                <p style="margin-left:34%;"><b>Image 4:</b> Example of lower threshold for edge detection.</p>
-                <img src="pics/results/HoughCircle_sig5_r6_gFalse_th_0.8.jpg" style="margin-left:25%;">
-                <p style="margin-left:35%;"><b>Image 5:</b> Example of smaller radius for Hough Circle.</p>
-                <p>As we predicted, we saw that with images that have a clearer image of the ball, we obtain better results from the Hough circle transform. An unobstructed/occluded ball, better lighting conditions, and image quality allows for it to be a stronger candidate in the algorithm.</p>
-                <img src="pics/results/Failed_Accumulator_sig5_r10_gFalse.jpg" style="margin-left:30%;" width="500" height="400">
-                <img src="pics/results/Failed_HoughCircle_sig5_r10_gFalse_th_0.8.jpg" style="margin-left:30%;" width="500" height="400">
-                <p style="margin-left:35%;"><b>Image 6:</b> Example of failed identification of the ball.</p>
-                <p>Overall, the results of our experimentation were not as we initially predicted. The range of parameters that need to be adjusted as well as the difficulty of finding the ball through Hough transformation caused difficulties with the accuracy of our system. However, we were able to improve our results by adding KMeans clustering to preprocess the image to obtain better results. Another problem we came across was determining where the goal is in the photo. We were able to better define where the ball should be for a goal using SIFT for net detection.</p>
-                <img src="pics/HoughLineExample.png" style="margin-left:28%;" width="500" height="400">
-                <p style="margin-left:36%;"><b>Image 7:</b> Detected lines from Hough Line Transform.</p>
-                <p>Overall, the results of our experimentation were not as we initially predicted. The range of parameters that need to be adjusted as well as the difficulty of finding the ball through Hough transformation caused difficulties with the accuracy of our system. However, we were able to improve our results by adding KMeans clustering to preprocess the image to obtain better results and we will attempt to even further improve them with SIFT in the next phase. Another problem we came across was determining where the goal is in the photo. To solve this we have recently experimented with the SIFT algorithm and we were able to find the net of the goal.</p>
-                <img src="pics/NetPoints.png" style="margin-left:29%;" width="500" height="400">
-                <p style="margin-left:37%;"><b>Image 8:</b> Net found in query image from SIFT.</p>
-                <p>For testing, we individually ran each image through our system and compared the output with the result from reality. We found that, overall, the system was 48% accurate with a 70% accuracy for scored goals and 25% accuracy for no-goals. We also compared the results of our system with a method that decides randomly whether the goal was made or not to ensure a better than random result. The random system accuracy was 44%.</p>
+                <p>First, we will classify each flower type which will then be used in determining toxicity; there are two separate outputs: flower is either toxic or nontoxic to dogs. In addition, we hope to determine if a correlation exists between species of toxic flowers.</p>
+                <img src="pics/flower.png" style="margin-left:20%;">
+                <p style="margin-left:40%;"><b>Image 2:</b> Flower 2</p>
 
                 <br>
 
@@ -99,9 +80,16 @@ layout: default
                 <!-- References -->
                 <h3>References</h3>
                 <ul>
+                    Articles:
                     <li><a href="https://ieeexplore.ieee.org/abstract/document/6968612">Machine Learning for Flower Classification</a></li>
                     <li><a href="https://ieeexplore.ieee.org/document/9270473">Machine Learning & Image Recognition</a></li>
                     <li><a href="https://ieeexplore.ieee.org/document/9270473">Toxic Plant List</a></li>
+                </ul>
+                <ul>
+                    Datasets:
+                    <li><a href="https://www.kaggle.com/msheriey/104-flowers-garden-of-eden"></a></li>
+                    <li><a href="https://www.kaggle.com/aksha05/flower-image-dataset"></a></li>
+                    <li><a href="https://www.kaggle.com/imsparsh/flowers-dataset"></a></li>
                 </ul>
 
                 <hr>
