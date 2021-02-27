@@ -34,41 +34,39 @@ layout: default
             <div class="page-header">
                 <!-- Title and Name -->
                 <h1>Goal-based Detection Technology for Soccer Goals</h1>
-                <span style="font-size: 20px; line-height: 1.5em;"><strong> Ryan Bogan, Maya Gee, Jaemo Koo, Kristopher Lee, Tyler Smith</strong></span><br>
-                <span style="font-size: 18px; line-height: 1.5em;">Computer Vision: Final Project Update, Fall 2020</span><br>
+                <span style="font-size: 20px; line-height: 1.5em;"><strong> Kristopher Lee, Haley Littmann, Anaya Patel, Amanda Walters, Mckennley Wilson</strong></span><br>
+                <span style="font-size: 18px; line-height: 1.5em;">Machine Learning: Project Proposal, Spring 2021</span><br>
                 <hr>
-
-                <!-- Abstract -->
-                <h3>Abstract</h3>
-                <p>Our team is interested in seeing how far computer vision can perform when applied to the concept of goal line technology in soccer. Current goal line technology relies heavily on a number of sensors placed around the field/in the ball, but we want to see if that is necessary for the desired effect.</p>
-                <p>Our approach began with determining where the key objects are in the image. We attempt to find the ball and the goal line to use as a reference point to determine if this is a goal or not. Technical algorithms used include a Canny edge detection, Hough transform, Kmeans clustering, and the SIFT algorithm.</p>
-                <p>From our experimentation with Hough Circle/Line transform coupled with SIFT net detection we were unable to determine whether the ball has crossed the goal line with enough accuracy to warrant the use of this method professionally.</p>
-                <img src="pics/HoughCircle.png" style="margin-left:20%;">
-                <p style="margin-left:40%;"><b>Image 1:</b> Output of Hough Circle Transform</p>
-
-                <br>
 
                 <!-- Introduction -->
                 <h3>Introduction</h3>
-                <p>Goal line technology is used in almost every professional soccer match. This project could be applied to soccer games around the world with reliable accuracy. Our algorithm could also be modified for other sports, such as tennis or football. For example, the output could be changed to detect whether a tennis ball or football player is out of bounds. Another application with regards to football is similar goal line technology to determine if the result of a play is a touchdown.</p>
-                <p>There are two main approaches for developing goal line technology: cameras and magnetic sensors. Our approach is modeled after the camera method, where various cameras positioned with views of the goal line are used to determine whether the soccer ball crossed the line. The other approach is to place a magnetic sensor or electric field inside the soccer ball, and use additional sensors on the goal line to detect the result of the play.</p>
+                <p>When pet owners are deciding if a certain area or environment is suitable for their pets, it can be difficult to tell if plants are toxic or not, especially if the person does not have a background in botany. If pets are exposed to toxic plants, this can cause unnecessary pain and health issues as well as the added expense of a veterinary visit.
+                </p>
+
+                <img src="pics/flower.png" style="margin-left:20%;">
+                <p style="margin-left:40%;"><b>Image 1:</b> Flower </p>
 
                 <br>
 
-                <!-- Approach -->
-                <h3>Approach</h3>
+                <!-- Problem Definition -->
+                <h3>Problem Definition</h3>
+                <p>The goal of this project is to classify different plant images by the species name. Multiple data sets obtained from Kaggle may be combined to create a robust final data set that can then be applied to determine a list of toxic and non-toxic plant species to dogs.</p>
+
+                <br>
+
+                <!-- Methods -->
+                <h3>Methods</h3>
                 <ul>
-                    <li>Initial Idea: Goal line technology</li>
-                    <li>Usage of Existing Implementation: Pre-existing modules we used include OpenCV and Numpy for image processing.  </li>
-                    <li>Obstacles: Occluded ball, Noise, varying circle radius size, and determining where the net, ball, and goal line is.</li>
+                    <li>Image Processing</li>
+                    <li>Categorizing toxic/nontoxic flowers to input into our data & respective algorithms</li>
+                    <li>Supervised Learning (classification): We will use the x,y coordinates and RGB values of pixels within the images to classify each plant</li>
+                    <li>Unsupervised Learning (clustering):  predictive - can tell if it’s poisonous (not knowing exact classification)</li>
                 </ul>
-                <p>We approach this problem by comparing the respective locations of a ball and a goal in the given image, and determining whether or not an observer can answer that a goal is scored or not with high degree of confidence. The provided set of images are raw snippets from actual gameplays. Our approach, therefore, requires preprocessing through noise filtering and blob detection with variable threshold before applying Hough transformation for line and circle detection for the goal line and the ball, respectively. OpenCV (for Hough Line but not Circle), along with Numpy, provides an adequate set of resources that help us to perform those proposed tasks.</p>
-                <p>We also run SIFT on all of our images to obtain the SIFT descriptors of each image.Then run SIFT on a region of one image, the region being a soccer goal. Using the descriptors from the soccer goal, we could match descriptors from the goal region to descriptors in all of the other images we ran SIFT on. Using the locations of the matched descriptors in each image, we can make a decision as to which side of the goal line that the goal is on. From here, we can compare the ball to the goal line to determine whether the shot captured in the image is a goal or not.</p>
 
                 <br>
 
-                <!-- Experiments & Results -->
-                <h3>Experiments & Results</h3>
+                <!-- Potential Results -->
+                <h3>Potential Results</h3>
                 <p>Overall, we had difficulty finding an appropriate dataset for our needs in this project. Therefore, we worked with a dataset composed of images taken from Google and Youtube videos which showed shots on goal as well as the resulting call of whether the goal was made or not. The set of images we look at are taken when the ball is either in the goal or the closest to inside the goal that it was. There are two sets of images with one set relating to goals and the other to no-goals. There were 13 images in the goal set and 12 images in the no-goal set.</p>
                 <p>EEvery image was preprocessed with KMeans Clustering for noise reduction, followed by Canny edge detection for the Hough Circle Transformation to identify candidate locations of a soccer ball within the image. </p>
                 <img src="pics/results/NoiseReduction_k5.jpg" style="margin-left:25%;">
@@ -94,20 +92,21 @@ layout: default
 
                 <br>
 
-                <!-- Conclusion & Future Work -->
-                <h3>Conclusion & Future Work</h3>
-                <p>From our work over the semester on the project, we found that the combination of Canny Edge Detection, Hough Circle/Line Transform, and SIFT descriptor matching is able to find the ball, goal line, and net but not deliver a sufficient result when determining if the ball is completely past the given line. The reason for this is that the found goal line is not always perfectly on the actual goal line. We believe that a promising area of future work would be improving the detection of the goal line.</p>
+                <!-- Discussion & Future Work -->
+                <h3>Discussion & Future Work</h3>
+                <p>One potential difficulty are collisions of toxic and nontoxic plants in our predictive model. Future expansions of the project could include classification with more variations of flowers and other types of plants. Furthermore, we could include more species of animals and categorize toxicity based on each species. In addition, the project could eventually classify crossbred flowers and identify the main parental species.</p>
 
                 <!-- References -->
                 <h3>References</h3>
                 <ul>
-                    <li><a href="https://www.hindawi.com/journals/aai/2012/512159/">Soccer Ball Detection Research Article</a></li>
-                    <li><a href="https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html">OpenCV Hough Line Transform</a></li>
+                    <li><a href="https://ieeexplore.ieee.org/abstract/document/6968612">Machine Learning for Flower Classification</a></li>
+                    <li><a href="https://ieeexplore.ieee.org/document/9270473">Machine Learning & Image Recognition</a></li>
+                    <li><a href="https://ieeexplore.ieee.org/document/9270473">Toxic Plant List</a></li>
                 </ul>
 
                 <hr>
                 <footer>
-                    <p>Authors: Ryan Bogan, Maya Gee, Jaemo Koo, Kristopher Lee, Tyler Smith</p>
+                    <p>Authors: Kristopher Lee, Haley Littmann, Anaya Patel, Amanda Walters, Mckennley Wilson</p>
                 </footer>
             </div>
         </div>
