@@ -33,14 +33,14 @@ layout: default
         <div class="container">
             <div class="page-header">
                 <!-- Title and Name -->
-                <h1>Classifying Flower Images on Toxicity</h1>
+                <h1>Classifying Flower Images and Deciding Toxicity</h1>
                 <span style="font-size: 20px; line-height: 1.5em;"><strong> Kristopher Lee, Haley Littmann, Anaya Patel, Amanda Walters, Mckennley Wilson</strong></span><br>
                 <span style="font-size: 18px; line-height: 1.5em;">Machine Learning: Project Proposal, Spring 2021</span><br>
                 <hr>
 
                 <!-- Introduction -->
                 <h3>Introduction</h3>
-                <p>When pet owners are deciding if a certain area or environment is suitable for their pets, it can be difficult to tell if plants are toxic or not, especially if the person does not have a background in botany. If pets are exposed to toxic plants, this can cause unnecessary pain and health issues as well as the added expense of a veterinary visit.
+                <p>It can be a dilemma for gardeners to where and what plants to place in their garden if they own pets. A certain area or environment may not be suitable for their pets and it can be difficult to tell what plants are toxic to them. Especially if the person does not have a background in botany and gardening is a new hobby. If pets are exposed to toxic plants, this can cause unnecessary pain and health issues as well as the added expense of a veterinary visit. Therefore, we thought to create a system to help these pet owners and prevent such problems.
                 </p>
 
                 <img src="pics/flower.png" style="margin-left:20%;">
@@ -50,14 +50,15 @@ layout: default
 
                 <!-- Problem Definition -->
                 <h3>Problem Definition</h3>
-                <p>The goal of this project is to classify different plant images by the species name. Multiple data sets obtained from Kaggle may be combined to create a robust final data set that can then be applied to determine a list of toxic and non-toxic plant species to dogs.</p>
+                <p>The goal of this project is to classify different plant images by the species name. We have found multiple data sets of flower images obtained from Kaggle which may be combined to create a robust data set. These images that can then be combined with a list of toxic and non-toxic plant species to pets to form a final data set with which we will perform machine learning algorithms to predit the toxicity of a given plant image.</p>
 
                 <br>
 
                 <!-- Methods -->
                 <h3>Methods</h3>
+                <p>The methods we plan to use for the project include:<p/>
                 <ul>
-                    <li>Image Processing</li>
+                    <li>Image Pre-Processing: </li>
                     <li>Categorizing toxic/nontoxic flowers to input into our data & respective algorithms</li>
                     <li>Supervised Learning (classification): We will use the x,y coordinates and RGB values of pixels within the images to classify each plant</li>
                     <li>Unsupervised Learning (clustering):  predictive - can tell if it’s poisonous (not knowing exact classification)</li>
