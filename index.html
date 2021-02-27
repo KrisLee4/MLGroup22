@@ -49,7 +49,7 @@ layout: default
 
                 <!-- Problem Definition -->
                 <h3>Problem Definition</h3>
-                <p>The goal of this project is to classify different plant images by the species name. We have found multiple data sets of flower images obtained from Kaggle which may be combined to create a robust data set. These images that can then be combined with a list of toxic and non-toxic plant species to pets to form a final data set with which we will perform machine learning algorithms to predit the toxicity of a given plant image.</p>
+                <p>The technical goal of this project is to classify various species of plant images by training on an aggregate set of flower images obtained from various data sets from Kaggle. Using this robust dataset along with a botanical listing of all known plants toxic to dogs, we will form a final dataset upon which to train a machine learning model, one which can identify both plant species and toxicity.</p>
 
                 <br>
 
@@ -57,18 +57,18 @@ layout: default
                 <h3>Methods</h3>
                 <p>The methods we plan to use for the project include:<p/>
                 <ul>
+                    <li>Data Scrubbing: Constructing a large database of toxic and non-toxic flowers</li>
                     <li>Image Pre-Processing: Normalizing RGB values and reshaping image arrays</li>
-                    <li>Categorizing toxic/nontoxic flowers to input into our data & respective algorithms</li>
                     <li>Unsupervised Learning (clustering): Grouping the images on idenitifable features</li>
-                    <li>Supervised Learning (classification): We will use the x,y coordinates and RGB values of pixels as features within the images to classify each plant</li>
-                    <li>We will most likely use python packages such as OpenCV and sklearn</li>
+                    <li>Supervised Learning (classification): Using x,y coordinates and RGB values of pixels as features within the images to classify each plant</li>
+                    <li>We will most likely use python packages such as OpenCV and sklearn as well.</li>
                 </ul>
 
                 <br>
 
                 <!-- Potential Results -->
                 <h3>Potential Results</h3>
-                <p>First, we will classify each flower type which will then be used in determining toxicity; there are two separate outputs: flower is either toxic or nontoxic to dogs. In addition, we hope to determine if a correlation exists between species of toxic flowers.</p>
+                <p>Our hope is that by the end of training we will have a model that can be used in determining the toxicity of plants via a single output as well as the species of the plant in a separate output. An additional goal would be in identifying a correlation between plant species and toxicity to dogs.</p>
                 <img src="images/OrchidsNotToxic.jpg" style="margin-left:28%;">
                 <p style="margin-left:31%;"><b>Image 2:</b> Orchids are not toxic to dogs. </p>
 
@@ -76,7 +76,7 @@ layout: default
 
                 <!-- Discussion & Future Work -->
                 <h3>Discussion & Future Work</h3>
-                <p>One potential difficulty are collisions of toxic and nontoxic plants in our predictive model. Future expansions of the project could include classification with more variations of flowers and other types of plants. Furthermore, we could include more species of animals and categorize toxicity based on each species. In addition, the project could eventually classify crossbred flowers and identify the main parental species.</p>
+                <p>One anticipated difficulty in the project is a collision of toxic and nontoxic plants in our predictive model. In absence of that issue however the project could be expanded to include more species of flowers as well as other types of plants. Furthermore we could identify the toxicity various other types of animals and categorize toxicity based on each species.</p>
 
                 <!-- References -->
                 <h3>References</h3>
